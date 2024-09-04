@@ -1,0 +1,29 @@
+<%- include('../partials/header') %> <%- include('../partials/navbar') %>
+
+<section class="log_in">
+  <div class="login_form">
+    <h1>Register</h1>
+    <form action="/users" method="post">
+      <input type="text" name="name" id="name" placeholder="Name" required />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Create password"
+        required
+      />
+
+      <button class="btn_submit" type="submit">Register</button>
+      <h5>Already have an account <a href="/login">Login</a></h5>
+    </form>
+  </div>
+</section>
+<%- include('../partials/bottom') %>

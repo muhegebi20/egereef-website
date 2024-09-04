@@ -1,0 +1,140 @@
+.log_in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(40, 40, 99);
+  height: 90vh;
+}
+.log_in .login_form {
+  background-color: white;
+  border-radius: 5px;
+  width: 35%;
+  margin: 0;
+  padding-bottom: 20px;
+}
+.login_form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login_form h1 {
+  margin: 1.5rem auto;
+  font-weight: 600;
+  font-size: 34px;
+  text-align: center;
+}
+.login_form input {
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 12px;
+  width: 85%;
+  margin: 15px auto;
+}
+.login_form .forget {
+  color: blue;
+  font-family: "Times New Roman", Times, serif;
+}
+.login_form .btn_submit {
+  width: 85%;
+  padding: 10px 6px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgb(25, 25, 216);
+  color: white;
+  box-shadow: -1px -2px 2px black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login_form .forget,
+.login_form button,
+.login_form h5 {
+  margin: 8px auto;
+  font-size: 1.2rem;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* fund page */
+.container {
+  position: relative;
+}
+.list_of_banks {
+  display: flex;
+}
+.list_of_banks h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 44px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.off_line {
+  padding: 20px 25px;
+}
+.off_line h3 {
+  text-align: center;
+  font-size: 27px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.banks_list {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
+.bank {
+  height: 250px;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 20px;
+}
+.bank h1,
+.bank p {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+.list_of_banks {
+  width: 100%;
+}
+.quote {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: black;
+  font-size: 30px;
+  width: 100%;
+  height: 100px;
+  padding: 15px 20px;
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .log_in .login_form {
+    width: 100%;
+  }
+  .list_of_banks h2 {
+    height: 150px;
+    font-size: 34px;
+  }
+  .off_line h3 {
+    font-size: 20px;
+  }
+  .banks_list {
+    grid-template-columns: auto;
+  }
+}

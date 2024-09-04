@@ -1,0 +1,25 @@
+<%- include('../partials/header') %> <%- include('../partials/navbar') %>
+<section class="body">
+  <div class="container">
+    <h1>Projektii haaraa Post godhi</h1>
+    <form action="#" method="post">
+      <div class="pro_heading">
+        <label for="head">Mata-duree Projektii</label>
+        <input type="text" name="head" id="head" />
+      </div>
+      <div class="content">
+        <label for="content">Projektii Baldhinaan ibsi</label>
+        <textarea name="content" id="content"></textarea>
+      </div>
+      <div class="image">
+        <label for="image">Suuraa galchi</label>
+        <input type="file" name="image" id="image" />
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include('../partials/bottom') %>

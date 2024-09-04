@@ -1,0 +1,31 @@
+<%- include('../partials/header') %> <%- include('../partials/navbar') %>
+<section class="log_in">
+  <div class="login_form">
+    <h1>Login</h1>
+    <form action="/login" method="post">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="password"
+        required
+      />
+
+      <a class="forget" href="#">Forgot password</a>
+      <button class="btn_submit" type="submit">Login</button>
+      <h5 class="break">
+        Don't have an account <a href="/register"> Sign Up</a>
+      </h5>
+    </form>
+  </div>
+</section>
+
+<%- include('../partials/bottom') %>
