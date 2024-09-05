@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const Project = require("../model/project");
 
 router.get("/", (req, res) => {
   res.redirect("/egereef");
 });
-router.get("/egereef", (req, res) => {
-  res.render("app/home");
+router.get("/egereef", async (req, res) => {
+  let projects = await Project.find({});
+  res.render("app/home", { projects });
 });
 router.get("/about", (req, res) => {
   res.render("app/about");
@@ -22,11 +24,14 @@ router.get("/fundme", (req, res) => {
 router.get("/postproject", (req, res) => {
   res.render("app/postProject");
 });
-router.get("/projects/:id", (req, res) => {
-  res.render("app/details");
+router.get("/projects/:id", async (req, res) => {
+  let { id } = req.params;
+  let project = await Project.findById(id);
+  res.render("app/details", { project });
 });
-router.get("/allProjects", (req, res) => {
-  res.render("app/allProjects");
+router.get("/allProjects", async (req, res) => {
+  let projects = await Project.find({});
+  res.render("app/allProjects", { projects });
 });
 
 module.exports = router;

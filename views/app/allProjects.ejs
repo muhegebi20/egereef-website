@@ -1,5 +1,17 @@
 <%- include('../partials/header') %> <%- include('../partials/navbar') %>
 <!-- put all projects here -->
-<h1>All Projects</h1>
-
+<h1 id="our_projects" class="proj_head">Projektiiwwan hojjataman Hunda</h1>
+<section class="projects">
+  <% for(project of projects) {%>
+  <div class="project">
+    <img src="<%= project.image %>" alt="" />
+    <div class="description">
+      <h1><a><%= project.title %> <% %></a></h1>
+      <p>
+        <%= project.body %><a href="/projects/<%= project._id %>">Read More</a>
+      </p>
+    </div>
+  </div>
+  <% } %>
+</section>
 <%- include('../partials/bottom') %>

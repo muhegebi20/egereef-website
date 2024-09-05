@@ -2,9 +2,10 @@
 
     <section class="details">
       <div class="detail">
-        <h1>Qarqaarsa Ummata Walloo</h1>
-            <img src="/annie-spratt-cVEOh_JJmEE-unsplash.jpg" alt="" />
+        <h1><%= project.title %></h1>
+            <img src="<%= project.image %>" alt="" />
         <p class="readings">
+          <%= project.body %>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequuntur, a, dolorum ea quas reiciendis dolores quibusdam quaerat repellendus quae ex ipsum pariatur. Veritatis autem sequi sapiente. Corrupti architecto fugit facere totam voluptatibus delectus modi corporis fuga, natus accusantium aliquid, beatae aspernatur suscipit! Iusto, numquam illo temporibus at nesciunt nulla. ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur
           eaque laudantium eos necessitatibus dolore, vitae porro sunt beatae
           inventore officia! Corporis nihil ipsam rem consequuntur. Voluptate
@@ -13,8 +14,11 @@
           natus eos quos minima voluptatum tempora quibusdam est praesentium,
           vero hic nam id ut delectus iure ipsam dolore rerum sint.
         </p>
+        <div class="all_proj">
+          <a style="font-size: large; word-wrap: break-word;" href="/egereef">Go Back</a>
+        </div>
       </div>
-      </div>
+    </div>
     </section>
 
     <%- include('../partials/footer') %>
