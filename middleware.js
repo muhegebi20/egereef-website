@@ -24,6 +24,20 @@ module.exports.isValidated = checkSchema({
   },
 });
 
+module.exports.checkPost = checkSchema({
+  title: {
+    trim: true,
+    notEmpty: {
+      errorMessage: "Mata-dureen galchaa",
+    },
+  },
+  body: {
+    trim: true,
+    notEmpty: {
+      errorMessage: "Ibsa gahaa galchaa",
+    },
+  },
+});
 // module.exports.isLoggedIn = (req, res, next) => {
 //   if (!req.isAuthenticated()) {
 //     req.flash("error", "you must login first");

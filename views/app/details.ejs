@@ -17,6 +17,16 @@
         <div class="all_proj">
           <a style="font-size: large; word-wrap: break-word;" href="/egereef">Go Back</a>
         </div>
+        <% if(currentUser && currentUser.role == "admin") {%>
+          <div class="all_proj">
+            <a href="/projects/<%= project._id %>/edit">Edit</a>
+          </div>
+          <div class="all_proj">
+            <form action="/projects/<%= project._id %>?_method=DELETE" method="post">
+              <button type="submit">Delete</button>
+            </form>
+          </div>
+            <% } %>
       </div>
     </div>
     </section>

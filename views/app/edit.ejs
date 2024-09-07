@@ -1,15 +1,21 @@
 <%- include('../partials/header') %> <%- include('../partials/navbar') %>
 <section class="body">
   <div class="container">
-    <h1>Projektii haaraa Post godhi</h1>
-    <form action="/projects" method="post">
+    <h1>Projektii edit godhi</h1>
+    <form action="/projects/<%= project._id %>?_method=PUT" method="post">
       <div class="pro_heading">
         <label for="head">Mata-duree Projektii</label>
-        <input type="text" name="title" id="head" required />
+        <input
+          type="text"
+          name="title"
+          id="head"
+          value="<%=project.title %>"
+          required
+        />
       </div>
       <div class="content">
         <label for="body">Projektii Baldhinaan ibsi</label>
-        <textarea name="body" id="body" required></textarea>
+        <textarea name="body" id="body" required><%=project.body %></textarea>
       </div>
       <div class="image">
         <label for="image">Suuraa galchi</label>
